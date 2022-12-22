@@ -1,0 +1,13 @@
+[Unit]
+Description=telegram-to-openai
+After=network.service
+
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/bin/telegram-to-openai -o {{ you_openai_token }} -t {{ you_telegram_bot_token }}
+Restart=always
+StartLimitInterval=0
+
+[Install]
+WantedBy=default.target
