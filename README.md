@@ -1,17 +1,15 @@
-# telegram-to-openai
+# Prepare
 
-# prepare
+Before start, you must create an OPENAI api token and a telegram bot token.
 
-Before start, you must create a OPENAI api token and a telegram bot token.
+# Build
 
-# build
-
-Use goland to build the project
+Use golang to build the project
 
     go mod download
     go build .
     
-# deploy on VPS
+# Deploy on VPS
 
 Copy the binary file to where you want
 
@@ -29,3 +27,7 @@ Enable && start service
 
     systemctl daemon-reload
     systemctl enable telegram-to-openai --now
+
+# Other
+
+You can also write a docker file to run it
